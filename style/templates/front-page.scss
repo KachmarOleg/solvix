@@ -1,2 +1,33 @@
 @import '../import/import';
 
+.achievements_block {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 70%;
+    @include rwd-max(1024) {
+        width: 100%;
+    }
+
+    .achievement_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 10px;
+        @include rwd-min(768) { 
+            min-width: 200px;
+        }
+
+        .achievement_number {
+            font-size: 48px;
+            font-weight: 700;
+            color: $cl;
+            @include rwd-max(767) {
+                font-size: 36px;
+            }
+        }
+    }
+}

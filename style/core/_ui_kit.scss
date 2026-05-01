@@ -12,10 +12,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 20px;
+  padding: 16px 28px;
   margin: 0 auto;
   background: linear-gradient(111.5deg, #FF9C33 0%, #FE7B02 100%);
-  box-shadow: 0 10px 20px -8px #fe820a;
+  box-shadow: 0 5px 20px -8px #fe820a;
   transition: 0.3s;
   &:hover {
     scale: 103%;
@@ -42,6 +42,10 @@
   &:hover {
     scale: 103%;
     box-shadow: 0 10px 30px -8px rgba(8, 30, 33, 0.4);
+  }
+  &:active {
+    scale: 100%;
+    box-shadow: 0 0 0 0 transparent;
   }
 }
 

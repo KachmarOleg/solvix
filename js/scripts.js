@@ -14,6 +14,43 @@ $(document).ready(function () {
     'use strict';
 
 
+    /* Achievements begin */
+        const nums = document.querySelectorAll('.animate_number');
+        const duration = 1500;
+
+        const run = el => {
+            const end = +el.textContent;
+            let startTime = null;
+
+            const step = time => {
+                if (!startTime) startTime = time;
+                const progress = Math.min((time - startTime) / duration, 1);
+
+                el.textContent = Math.floor(progress * end);
+
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                } else {
+                    el.textContent = end;
+                }
+            };
+
+            requestAnimationFrame(step);
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    nums.forEach(run);
+                    observer.disconnect();
+                }
+            });
+        });
+
+        observer.observe(document.querySelector('.achievements_block'));
+    /* Achievements end */
+
+
     // variables
     const body = $('body');
     const header = $('header');

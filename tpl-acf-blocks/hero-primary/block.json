@@ -1,0 +1,18 @@
+{
+  "name": "acf/hero-primary",
+  "title": "Hero primary",
+  "description": "A custom hero primary block.",
+  "category": "layout",
+  "keywords": [
+    "hero",
+    "primary",
+    "banner",
+    "top section"
+  ],
+  "icon": "format-gallery",
+  "apiVersion": 2,
+  "acf": {
+    "renderTemplate": "./block-hero-primary.php",
+    "mode": "edit"
+  }
+}

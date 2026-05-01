@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<?php get_template_part( 'tpl-parts/top-panels/top-panel', 'primary' ); ?>
-
 <?php get_template_part( 'tpl-parts/gutenberg' ); ?>
 
 <?php
