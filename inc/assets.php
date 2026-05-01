@@ -23,7 +23,12 @@ function tt_enqueue_assets(): void
 	// uncomment next line and comment all below it on deploy after webpack build
 	/*wp_enqueue_script('main', get_stylesheet_directory_uri(). '/dist/main.min.js', array('jquery'), '1.0', array('in_footer' => true, 'strategy' => 'defer' ));*/
 	/*wp_enqueue_script('aos', get_stylesheet_directory_uri(). '/js/libs/aos.js', array('jquery'), null, true);*/
-	wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'libs' ), null, array(
+    wp_enqueue_script( 'cursor-animation', get_stylesheet_directory_uri() . '/js/cursor-animation.js', array( 'libs' ), null, array(
+        'in_footer' => true,
+        'strategy'  => 'defer'
+    ) );
+
+    wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'libs' ), null, array(
 		'in_footer' => true,
 		'strategy'  => 'defer'
 	) );
