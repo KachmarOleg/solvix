@@ -46,6 +46,7 @@ body {
   max-width: calc(100% - 48px);
   margin: 0 auto;
   position: relative;
+  transition: 0.3s;
   @include rwd-range(1024, 481) {max-width: calc(100% - 78px)}
   @include rwd-min(1025) {max-width: calc(100% - 144px)}
 

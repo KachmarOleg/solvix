@@ -18,7 +18,7 @@
 <header>
 	<div class="header__container container flex">
 		<?php echo ( is_front_page() ) ? '<figure class="header__logo">' : '<a href="' . esc_url( get_site_url() ) . '" class="header__logo">'; ?>
-		<img src="<?php echo esc_url( theme( 'images/logo.svg' ) ); ?>" height="125" width="28"
+		<img src="<?php echo esc_url( theme( 'images/logo.svg' ) ); ?>" height="110" width="42"
 		     alt="<?php bloginfo(); ?>">
 		<?php echo ( is_front_page() ) ? '</figure>' : '</a>'; ?>
 

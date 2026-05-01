@@ -3,19 +3,29 @@
 .button,
 .wp-block-button__link,
 .wp-block-file__button {
-  display: inline-flex;
-  align-items: center;
   font: 500 16px/24px $ff;
-  text-transform: uppercase;
   color: $tx_black;
-  padding: 10px 20px;
-  background-color: $cl;
   cursor: pointer;
   user-select: none;
-  border-radius: 5px !important;
+  background: #ff9f1c;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0 auto;
+  background: linear-gradient(111.5deg, #FF9C33 0%, #FE7B02 100%);
+  box-shadow: 0 10px 20px -8px #fe820a;
+  transition: 0.3s;
+  &:hover {
+    scale: 103%;
+    box-shadow: 0 10px 30px -8px #fe820a;
+  }
 
-  &.is_full {width: 100%}
-  @include hover {background-color: $cl}
+  &:active {
+    scale: 100%;
+    box-shadow: 0 0 0 0 transparent;
+  }
 }
 
 .wp-block-button {
