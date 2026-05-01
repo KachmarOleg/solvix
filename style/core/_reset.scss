@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   color: $tx;
-  background-color: #13151B;
+  background-color: $bg;
   @include rwd-max(1024) {
     &.is_overflow {overflow: hidden}
   }

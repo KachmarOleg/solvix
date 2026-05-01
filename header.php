@@ -8,11 +8,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="theme-color" content="#1c2c39">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="preload" as="style"
-	      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap"/>
-	<link rel="stylesheet"
-	      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap"
-	      media="print" onload="this.media='all'"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
