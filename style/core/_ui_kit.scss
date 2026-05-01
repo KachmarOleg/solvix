@@ -28,6 +28,23 @@
   }
 }
 
+.is-style-outline a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 28px;
+  color: $tx;
+  background: linear-gradient(106.17deg, rgba(14, 53, 57, 0.6) 0%, rgba(8, 30, 33, 0.4) 100%);
+  border: 1px solid rgba(73, 167, 163, 0.12);
+  box-shadow: 0 8px 32px rgba(1, 8, 9, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  &:hover {
+    scale: 103%;
+    box-shadow: 0 10px 30px -8px rgba(8, 30, 33, 0.4);
+  }
+}
+
 .wp-block-button {
   display: inline-block;
   &.is_full {

@@ -31,6 +31,7 @@ body {
 }
 
 #main {
+  position: relative;
   flex: 1 0 auto;
   margin-top: 60px;
   @include rwd-min(1025) {margin-top: 80px}

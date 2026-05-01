@@ -1,0 +1,61 @@
+body {
+  cursor: none;
+}
+
+header,
+footer {
+  cursor: auto;
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #FFC700;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 0 10px 5px #fe820a;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  pointer-events: none;
+  z-index: 1;
+  //background: radial-gradient(circle, rgba(0, 255, 180, 0.25) 0%, transparent 60%);
+  background: radial-gradient(circle, rgb(252 128 9 / 20%) 0%, transparent 60%);
+  filter: blur(60px);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
+}
+
+.cursor-hover .cursor-dot {
+  opacity: 0;
+}
+
+.cursor-hover .cursor-glow {
+  opacity: 0.4;
+}
+
+.cursor-hidden .cursor-dot {
+  opacity: 0;
+}
+
+.grid_decor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image:
+          linear-gradient($teal_tx 1px, transparent 1px),
+          linear-gradient(90deg, $teal_tx 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(black 30%, transparent 70%);
+  opacity: 0.15;
+  pointer-events: none;
+}

@@ -40,7 +40,14 @@
 	</div>
 </header>
 
+
+<div class="cursor-dot"></div>
+<div class="cursor-glow"></div>
+
 <main id="main">
+
+    <div class="grid_decor"></div>
+
 	<div id="search_field">
 		<div class="container"><?php get_search_form(); ?></div>
 	</div>
