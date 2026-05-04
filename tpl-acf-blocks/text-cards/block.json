@@ -1,0 +1,18 @@
+{
+  "name": "acf/text-cards",
+  "title": "Text cards",
+  "description": "A custom block with title and text cards.",
+  "category": "media",
+  "keywords": [
+    "text",
+    "cards",
+    "media",
+    "columns"
+  ],
+  "icon": "format-gallery",
+  "apiVersion": 2,
+  "acf": {
+    "renderTemplate": "./block-text-cards.php",
+    "mode": "edit"
+  }
+}
