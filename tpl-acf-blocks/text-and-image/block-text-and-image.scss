@@ -24,29 +24,14 @@
     }
   }
 
-  .text_and_image__subtitle {
-    margin-bottom: 16px;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: 2.4px;
-    text-transform: uppercase;
-    color: $teal_tx;
-  }
-
-  .text_and_image__title {
-    margin-bottom: 32px;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 48px;
-    letter-spacing: -0.96px;
-    color: $tx;
-  }
-
   .text_and_image__description {
     font-size: 18px;
     line-height: 29px;
     color: $tx;
+  }
+
+  .text_and_image__button {
+    margin-top: 32px;
   }
 
   .text_and_image__image {

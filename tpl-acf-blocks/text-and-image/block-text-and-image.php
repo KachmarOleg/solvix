@@ -9,7 +9,7 @@ $block = get_field( 'text_and_image' ); ?>
         <div class="container_grid">
             <div class="start_1_cols_6 text_and_image__text">
                 <?php if ( $subtitle = $block['subtitle'] ) : ?>
-                    <p class="text_and_image__subtitle"><?php echo esc_html($subtitle); ?></p>
+                    <p class="subtitle"><?php echo esc_html($subtitle); ?></p>
                 <?php endif; ?>
 
                 <?php if ( $title = $block['title'] ) : ?>
@@ -19,6 +19,11 @@ $block = get_field( 'text_and_image' ); ?>
                 <?php if ( $description = $block['description'] ) : ?>
                     <div class="text_and_image__description content">
                         <?php echo wp_kses_post( $description ); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if ( $button = $block['button'] ) : ?>
+                    <div class="wp-block-button">
+                        <a href="<?php echo esc_url( $button['url'] ); ?>" class="text_and_image__button is_outline_button" target="<?php echo $button['target'] ? : '_self'; ?>"><?php echo esc_html( $button['title'] ); ?></a>
                     </div>
                 <?php endif; ?>
             </div>
