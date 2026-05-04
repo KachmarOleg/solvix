@@ -3,6 +3,9 @@
   .top_panel {
     &__primary {
       height: calc(100dvh - 112px);
+      @include rwd-max(1024) {
+        height: auto;
+      }
     }
   }
 }
@@ -11,6 +14,9 @@
   &__primary {
     height: calc(100dvh - 80px);
     padding: 70px 0 0;
+    @include rwd-max(1024) {
+      height: auto;
+    }
 
     .container {
       display: flex;

@@ -7,7 +7,7 @@ $block = get_field( 'text_and_image' ); ?>
 <section class="text_and_image">
     <div class="container">
         <div class="container_grid">
-            <div class="start_1_cols_6 text_and_image__text content">
+            <div class="start_1_cols_6 text_and_image__text">
                 <?php if ( $subtitle = $block['subtitle'] ) : ?>
                     <p class="text_and_image__subtitle"><?php echo esc_html($subtitle); ?></p>
                 <?php endif; ?>
@@ -17,7 +17,9 @@ $block = get_field( 'text_and_image' ); ?>
                 <?php endif; ?>
 
                 <?php if ( $description = $block['description'] ) : ?>
-                    <div class="text_and_image__description"><?php echo wp_kses_post( $description ); ?></div>
+                    <div class="text_and_image__description content">
+                        <?php echo wp_kses_post( $description ); ?>
+                    </div>
                 <?php endif; ?>
             </div>
 

@@ -10,8 +10,21 @@
   backdrop-filter: blur(14px);
   background: #001619;
   transition: all .3s ease;
+  @include rwd-max(1024) {
+    padding: 80px 0;
+    margin: 80px 0;
+  }
 
-  &__subtitle {
+  .container_grid {
+    @include rwd-range(1024, 768) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 20px;
+      width: 100%;
+    }
+  }
+
+  .text_and_image__subtitle {
     margin-bottom: 16px;
     font-weight: 600;
     font-size: 12px;
@@ -21,8 +34,8 @@
     color: $teal_tx;
   }
 
-  &__title {
-    margin-bottom: 32px !important;
+  .text_and_image__title {
+    margin-bottom: 32px;
     font-weight: 700;
     font-size: 48px;
     line-height: 48px;
@@ -30,10 +43,18 @@
     color: $tx;
   }
 
-  &__description {
-    font-weight: 400;
+  .text_and_image__description {
     font-size: 18px;
     line-height: 29px;
     color: $tx;
+  }
+
+  .text_and_image__image {
+    @include rwd-max(1024) {
+      margin: 32px auto 0;
+    }
+    @include rwd-max(767) {
+      max-width: 300px;
+    }
   }
 }
