@@ -1,47 +1,61 @@
 body {
-  cursor: none;
+  @media (pointer: fine) {
+    cursor: none;
+  }
 }
 
 header,
 footer {
-  cursor: auto;
+  @media (pointer: fine) {
+    cursor: auto;
+  }
 }
 
 .cursor-dot {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  background: #FFC700;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  box-shadow: 0 0 10px 5px #fe820a;
-  transform: translate(-50%, -50%);
+  @media (pointer: fine) {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: #FFC700;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    box-shadow: 0 0 10px 5px #fe820a;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .cursor-glow {
-  position: fixed;
-  width: 400px;
-  height: 400px;
-  pointer-events: none;
-  z-index: 1;
-  //background: radial-gradient(circle, rgba(0, 255, 180, 0.25) 0%, transparent 60%);
-  background: radial-gradient(circle, rgb(252 128 9 / 20%) 0%, transparent 60%);
-  filter: blur(60px);
-  transform: translate(-50%, -50%);
-  transition: opacity 0.2s ease;
+  @media (pointer: fine) {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+    z-index: 1;
+    //background: radial-gradient(circle, rgba(0, 255, 180, 0.25) 0%, transparent 60%);
+    background: radial-gradient(circle, rgb(252 128 9 / 20%) 0%, transparent 60%);
+    filter: blur(60px);
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease;
+  }
 }
 
 .cursor-hover .cursor-dot {
-  opacity: 0;
+  @media (pointer: fine) {
+    opacity: 0;
+  }
 }
 
 .cursor-hover .cursor-glow {
-  opacity: 0.4;
+  @media (pointer: fine) {
+    opacity: 0.4;
+  }
 }
 
 .cursor-hidden .cursor-dot {
-  opacity: 0;
+  @media (pointer: fine) {
+    opacity: 0;
+  }
 }
 
 .grid_decor {
