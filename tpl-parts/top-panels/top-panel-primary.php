@@ -9,15 +9,7 @@ $thumb_id = get_post_thumbnail_id( get_the_ID() );
 ?>
 
 <section class="top_panel top_panel__primary">
-	<?php if ( has_post_thumbnail( get_the_ID() ) ) : ?>
-		<figure>
-			<?php echo wp_get_attachment_image( $thumb_id, 'full', false, array( 'alt' => get_alt( $thumb_id ), 'class' => 'object_fit' ) ); ?>
-		</figure>
-	<?php endif; ?>
-
 	<div class="container">
-        <?php echo get_the_content(); ?>
-
         <?php if ( $title ) : ?>
             <h1>
                 <?php echo wp_kses_post($title); ?>
