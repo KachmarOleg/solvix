@@ -1,0 +1,16 @@
+{
+  "name": "acf/projects-block",
+  "title": "Projects block",
+  "description": "A custom block to display projects with project image, title and button to project.",
+  "category": "media",
+  "keywords": [
+    "projects",
+    "project"
+  ],
+  "icon": "portfolio",
+  "apiVersion": 2,
+  "acf": {
+    "renderTemplate": "./block-projects.php",
+    "mode": "edit"
+  }
+}
