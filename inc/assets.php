@@ -28,6 +28,11 @@ function tt_enqueue_assets(): void
         'strategy'  => 'defer'
     ) );
 
+    wp_enqueue_script( 'glass-effect', get_stylesheet_directory_uri() . '/js/glass-effect.js', array( 'libs' ), null, array(
+        'in_footer' => true,
+        'strategy'  => 'defer'
+    ) );
+
     wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'libs' ), null, array(
 		'in_footer' => true,
 		'strategy'  => 'defer'

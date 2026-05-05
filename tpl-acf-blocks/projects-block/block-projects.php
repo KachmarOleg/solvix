@@ -26,14 +26,13 @@ $block = get_field( 'projects_block' ); ?>
         <div class="projects_container">
             <?php if ( $projects = $block['projects'] ) : ?>
                 <?php foreach ( $projects as $project ) : ?>
-                    <?php
-                    $img_id = get_post_thumbnail_id( $project->ID );
-                    ?>
+                    <?php $img_id = get_post_thumbnail_id( $project->ID ); ?>
                     <div class="project_card">
                         <?php if ( $img_id ) : ?>
-                            <figure class="project_card__image">
-                                <a href="/">
+                            <figure class="project_card__image glass_effect">
+                                <a href="<?php echo get_permalink($project->ID)?>" tabindex="-1" aria-hidden="true">
                                     <?php echo wp_get_attachment_image( $img_id, 'full', false, array( 'alt' => get_alt( $img_id ), 'class' => 'object_fit' ) ); ?>
+                                    <div class="glass-strips"></div>
                                 </a>
                             </figure>
                         <?php endif; ?>

@@ -1,0 +1,55 @@
+@import '../import/import';
+
+figure.glass_effect {
+  position: relative;
+  overflow: hidden;
+  perspective: 900px;
+  perspective-origin: center center;
+}
+
+figure.glass_effect a {
+  display: block;
+  position: relative;
+}
+
+figure.glass_effect .glass-strips {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  z-index: 4;
+  pointer-events: none;
+}
+
+figure.glass_effect .glass-strips .gs {
+  flex: 1;
+  position: relative;
+  transform-origin: center center;
+  will-change: transform;
+  background: transparent;
+}
+
+figure.glass_effect .glass-strips .gs .gs-blind {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: linear-gradient(135deg, $border, $border);
+  border: 1px solid $teal_tx;
+  transition: .3s;
+}
+
+/* --- Glass shimmer overlay (injected by JS) --- */
+figure.glass_effect .glass-strips .gs .gs-glass {
+  position: absolute;
+  inset: 0;
+  display: none;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+                  105deg,
+                  rgba(255, 255, 255, 0)       0%,
+                  rgba(160, 230, 210, 0.22)   35%,
+                  rgba(255, 255, 255, 0.35)   50%,
+                  rgba(100, 200, 255, 0.15)   65%,
+                  rgba(255, 255, 255, 0)     100%
+  );
+}
