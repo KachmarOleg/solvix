@@ -114,6 +114,17 @@
       font-weight: 500;
       box-shadow: 0 0 20px rgb(71 205 195 / 28%);
       border-radius: 12px;
+      transition: 0.3s;
+
+      &:hover {
+        scale: 103%;
+        box-shadow: 0 10px 30px rgb(71 205 195 / 28%);
+      }
+
+      &:active {
+        scale: 100%;
+        box-shadow: 0 0 0 0 transparent;
+      }
     }
   }
 }
