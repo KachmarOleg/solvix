@@ -1,7 +1,8 @@
 // top-panel
 .admin-bar {
   .top_panel {
-    &__primary {
+    &__primary,
+    &__secondary {
       height: calc(100dvh - 112px);
       @include rwd-max(1024) {
         height: auto;
@@ -29,10 +30,6 @@
         color: rgba(#FCF8F9, 0.65);
       }
     }
-  }
-
-  &__secondary {
-    padding: 50px 0;
   }
 
   &__default {
@@ -92,4 +89,43 @@
   }
 
   h1 {color: $tx}
+}
+
+.top_panel__secondary {
+  display: flex;
+  align-items: flex-end;
+  height: calc(100dvh - 80px);
+  padding: 70px 0 10vh;
+  @include rwd-max(1024) {
+    height: auto;
+  }
+
+  &:before {
+    background: linear-gradient(180deg, #021517cc 0%, #021517d9 20%, #021517f0 40%, #021517 100%);
+  }
+
+  .subtitle {
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    margin-bottom: 32px;
+  }
+
+  .top_panel__description {
+    max-width: 60%;
+  }
+
+  .project_button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 32px 0 0;
+    width: fit-content;
+
+    svg {
+      rotate: 315deg;
+      transform: translate(1px, 1px);
+    }
+  }
 }

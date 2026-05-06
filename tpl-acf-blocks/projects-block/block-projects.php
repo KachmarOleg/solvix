@@ -26,7 +26,15 @@ $block = get_field( 'projects_block' ); ?>
         <div class="projects_container">
             <?php if ( $projects = $block['projects'] ) : ?>
                 <?php foreach ( $projects as $project ) : ?>
-                    <?php $img_id = get_post_thumbnail_id( $project->ID ); ?>
+                    <?php $top_panel = get_field('top_panel', $project->ID);
+                    $img_id = get_post_thumbnail_id($project->ID);
+                    if ( !empty($top_panel) && !empty($top_panel['preview_image']) ) {
+                        if ( is_array($top_panel['preview_image']) ) {
+                            $img_id = $top_panel['preview_image']['id'] ?? $img_id;
+                        } else {
+                            $img_id = $top_panel['preview_image'];
+                        }
+                    } ?>
 
                     <a href="<?php echo get_permalink($project->ID)?>" class="project_card" aria-label="Read more about <?php echo esc_html( $project->post_title ); ?>">
                         <?php if ( $img_id ) : ?>

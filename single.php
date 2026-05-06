@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part( 'tpl-parts/top-panels/top-panel', 'default' ); ?>
+<?php get_template_part( 'tpl-parts/top-panels/top-panel', 'secondary' ); ?>
 
 <?php get_template_part( 'tpl-parts/single/single', 'meta' ); ?>
 
