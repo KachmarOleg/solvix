@@ -8,26 +8,23 @@ $top_panel = get_field('top_panel', get_the_ID());
 $button_url = $top_panel['project_url'] ?? null;
 ?>
 
-<section class="top_panel top_panel__secondary">
-	<?php if ( has_post_thumbnail( get_the_ID() ) ) : ?>
-		<figure>
-			<?php echo wp_get_attachment_image( $thumb_id, 'full', false, array( 'alt' => get_alt( $thumb_id ), 'class' => 'object_fit' ) ); ?>
-		</figure>
-	<?php endif; ?>
+<section class="top_panel top_panel__secondary container_grid">
 
-	<div class="container">
+    <div class="grid_decor"></div>
+
+    <div class="start_2_cols_3 text_col">
         <?php if ( custom_tax($project->ID, 'industry') ) : ?>
             <div class="subtitle"><?php echo custom_tax($project->ID, 'industry'); ?></div>
         <?php endif; ?>
 
-		<h1><?php echo get_the_title(); ?></h1>
+        <h1><?php echo get_the_title(); ?></h1>
 
         <?php if ( $project->post_excerpt ) : ?>
             <div class="top_panel__description content">
                 <?php echo wp_kses_post( $project->post_excerpt ); ?>
             </div>
         <?php endif; ?>
-        
+
         <?php if ( $button_url ) : ?>
             <a href="<?php echo esc_url( $button_url ); ?>" class="project_button button" target="_blank">
                 View Project
@@ -37,5 +34,11 @@ $button_url = $top_panel['project_url'] ?? null;
                 </svg>
             </a>
         <?php endif; ?>
-	</div>
+    </div>
+
+    <?php if ( has_post_thumbnail( get_the_ID() ) ) : ?>
+        <figure>
+            <?php echo wp_get_attachment_image( $thumb_id, 'full', false, array( 'alt' => get_alt( $thumb_id ), 'class' => 'object_fit' ) ); ?>
+        </figure>
+    <?php endif; ?>
 </section>

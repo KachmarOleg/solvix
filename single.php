@@ -4,8 +4,6 @@
 
 <?php get_template_part( 'tpl-parts/single/single', 'meta' ); ?>
 
-<?php get_template_part( 'tpl-parts/single/single', 'thumb' ); ?>
-
 <?php get_template_part( 'tpl-parts/gutenberg', null ); ?>
 
 <?php get_template_part( 'tpl-parts/single/single', 'related' ); ?>

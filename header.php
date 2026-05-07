@@ -46,7 +46,9 @@
 
 <main id="main">
 
-    <div class="grid_decor"></div>
+    <?php if ( is_page() ) : ?>
+        <div class="grid_decor"></div>
+    <?php endif; ?>
 
 	<div id="search_field">
 		<div class="container"><?php get_search_form(); ?></div>

@@ -187,6 +187,10 @@ hr {
       &:not(:last-child) {
         margin-bottom: 24px
       }
+
+      &:not(:first-child) {
+        margin-top: 48px;
+      }
     }
   }
 

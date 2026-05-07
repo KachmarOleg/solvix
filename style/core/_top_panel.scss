@@ -66,7 +66,7 @@
     content: "";
     position: absolute;
     top: -50%;
-    left: 50%;
+    left: 0;
     right: 0;
     bottom: 0;
     width: 50vw;
@@ -92,17 +92,66 @@
 }
 
 .top_panel__secondary {
-  display: flex;
+  display: grid;
   align-items: flex-end;
+  max-width: 1920px;
   height: calc(100dvh - 80px);
-  padding: 70px 0 10vh;
+  padding: 0;
+  margin: 0 auto 0 !important;
   @include rwd-max(1024) {
     height: auto;
   }
 
   &:before {
-    background: linear-gradient(180deg, #021517cc 0%, #021517d9 20%, #021517f0 40%, #021517 100%);
+    background: linear-gradient(180deg, rgb(2 21 23 / 40%) 0%, rgb(2 21 23 / 40%) 70%, #021517 100%);
+    //background: linear-gradient(180deg, rgb(2 21 23 / 59%) 0%, rgb(2 21 23 / 60%) 20%, rgb(2 21 23 / 81%) 40%, #021517 100%);
+    //background: linear-gradient(180deg, #021517cc 0%, #021517d9 20%, #021517f0 40%, #021517 100%);
   }
+
+  .grid_decor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container_grid {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .text_col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    @include rwd-range(1599, 1300) {
+      grid-column: 2 / span 4 !important;
+    }
+    @include rwd-range(1299, 1025) {
+      grid-column: 2 / span 5 !important;
+    }
+  }
+
+  figure {
+    padding: 70px 30px;
+
+    img {
+      width: auto;
+      height: 75vh;
+      max-width: 70%;
+      object-fit: contain;
+      object-position: center;
+      margin-left: auto;
+    }
+  }
+
+  .image_col {
+    position: relative;
+    height: 100%;
+  }
+
+
 
   .subtitle {
     margin-bottom: 16px;
@@ -113,7 +162,10 @@
   }
 
   .top_panel__description {
-    max-width: 60%;
+    font-size: 18px;
+    @include rwd-min(1025) {
+      max-width: 400px;
+    }
   }
 
   .project_button {

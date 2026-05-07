@@ -1,12 +1,108 @@
 @import '../import/import';
 
+.single {
+  .gutenberg {
+    .content {
+      width: 760px;
+      max-width: 100%;
+      margin: 0 auto;
+
+      h2 {
+        font-size: clamp(34px, 4vw, 52px);
+        background: linear-gradient(135deg, #ffffff 0%, #49a7a3 45%, #ff9f1c 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.8;
+        letter-spacing: -0.01em;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
 .single_post {
   &__meta {
-    margin-bottom: 20px;
-
-    .shrs {margin-top: 20px}
+    padding: 80px 0;
+    border-top: 1px solid #0e2f34;
+    border-bottom: 1px solid #0e2f34;
   }
 
   &__thumb {margin-bottom: 30px}
 
+  &__meta__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 32px;
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+
+      .meta-label {
+        font-weight: 600;
+        font-size: 18px;
+        color: $teal_tx;
+        margin-bottom: 5px;
+      }
+
+      .meta-value {
+        font-size: 18px;
+      }
+
+      .technologies-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 5px;
+
+        .tech-tag {
+          background: #f0f0f0;
+          padding: 8px 16px;
+          border-radius: 20px;
+          font-size: 14px;
+          color: $tx;
+          display: inline-block;
+          background: linear-gradient(135deg, hsl(186 60% 14% / .6), hsl(186 60% 8% / .4));;
+          backdrop-filter: blur(20px) saturate(140%);
+          -webkit-backdrop-filter: blur(20px) saturate(140%);
+          border: 1px solid hsl(178 39% 47% / .12);
+          box-shadow: 0 8px 32px hsl(187 82% 2% / .5), inset 0 1px hsl(345 38% 98% / .04);
+        }
+      }
+
+      .cost-rating {
+        display: flex;
+        gap: 4px;
+        margin-top: 5px;
+
+        .cost-tag {
+          width: 18px;
+          height: 18px;
+          stroke: $tx_grey;
+          transition: all 0.2s ease;
+
+          &.active {
+            color: $cl;
+            stroke: $cl;
+            fill: $cl;
+            fill-opacity: 0.2;
+          }
+        }
+      }
+    }
+
+    &.technologies_info {
+      border-top: 1px solid #0e2f34;
+      padding-top: 32px;
+      margin-top: 32px;
+      margin-bottom: 0;
+      min-width: 100%;
+    }
+  }
 }
