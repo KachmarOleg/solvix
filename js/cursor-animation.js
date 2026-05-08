@@ -45,7 +45,7 @@ $(document).ready(function () {
 
     animate();
 
-    const interactive = document.querySelectorAll('a, button');
+    const interactive = document.querySelectorAll('a, button, .block__custom_slider');
 
     interactive.forEach(el => {
         el.addEventListener('mouseenter', () => {

@@ -5,7 +5,8 @@ body {
 }
 
 header,
-footer {
+footer,
+.block__custom_slider {
   @media (pointer: fine) {
     cursor: auto;
   }

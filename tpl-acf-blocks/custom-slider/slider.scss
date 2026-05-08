@@ -1,2 +1,6 @@
 @import '../../style/import/import';
 @import "../../style/modules/swiper";
+
+.swiper-slide {
+  background: linear-gradient(135deg, rgba(73, 167, 163, 0.4) 0%, rgba(254, 151, 44, 0.3) 100%);
+}

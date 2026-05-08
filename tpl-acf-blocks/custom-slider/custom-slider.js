@@ -18,15 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
             loop: true,
             speed: 600,
             grabCursor: true,
-            effect: "creative",
-            creativeEffect: {
-                prev: {
-                    translate: ["-20%", 0, -1],
-                },
-                next: {
-                    translate: ["100%", 0, 0],
-                },
-            },
+            effect: "fade",
+            // creativeEffect: {
+            //     prev: {
+            //         translate: ["-20%", 0, -1],
+            //     },
+            //     next: {
+            //         translate: ["100%", 0, 0],
+            //     },
+            // },
         });
     });
 });
