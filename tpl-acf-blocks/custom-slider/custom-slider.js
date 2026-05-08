@@ -4,29 +4,56 @@ document.addEventListener('DOMContentLoaded', () => {
         const next = swiperWrapper.querySelector('.sw_next');
         const prev = swiperWrapper.querySelector('.sw_prev');
         const pagination = swiperWrapper.querySelector('.sw_pagination');
+        const thumbsContainer = swiperWrapper.querySelector('.swiper_thumbs');
 
         const swiper = new Swiper(swiperContainer, {
             navigation: {
                 nextEl: next,
                 prevEl: prev
             },
-            pagination: {
-                el: pagination,
-                type: 'bullets',
-                clickable: true
-            },
             loop: true,
             speed: 600,
             grabCursor: true,
             effect: "fade",
-            // creativeEffect: {
-            //     prev: {
-            //         translate: ["-20%", 0, -1],
-            //     },
-            //     next: {
-            //         translate: ["100%", 0, 0],
-            //     },
-            // },
+            fadeEffect: {
+                crossFade: true
+            },
+            thumbs: {
+                swiper: thumbsContainer ? new Swiper(thumbsContainer, {
+                    slidesPerView: 'auto',
+                    spaceBetween: 10,
+                    watchSlidesProgress: true,
+                    loop: true,
+                    centeredSlides: false,
+                    slideToClickedSlide: true,
+                }) : null
+            }
+        });
+
+        // Initialize Fancybox for main slider images
+        Fancybox.bind('[data-fancybox="slider-gallery"]', {
+            Thumbs: {
+                type: "modern"
+            },
+            Toolbar: {
+                display: {
+                    left: ["infobar"],
+                    middle: [
+                        "zoomIn",
+                        "zoomOut",
+                        "toggle1to1",
+                        "rotateCCW",
+                        "rotateCW",
+                        "flipX",
+                        "flipY",
+                    ],
+                    right: ["slideshow", "fullscreen", "download", "close"],
+                },
+            },
+            Carousel: {
+                transition: "fade",
+                infinite: true,
+            },
         });
     });
 });

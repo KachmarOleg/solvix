@@ -1,30 +1,74 @@
 // swiper controls
 .swiper-slide {box-sizing: border-box}
 
+.block__custom_slider {
+  position: relative;
+}
+
 .sw_controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 16px;
-  margin-top: 32px;
+  pointer-events: none;
+  z-index: 10;
 }
 
 .sw_prev,
 .sw_next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   transition: all 0.3s ease;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  z-index: 15;
+  background: linear-gradient(135deg, hsla(186, 60%, 14%, 0.6), hsla(186, 60%, 8%, 0.4));
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(73, 167, 163, .12);
+  box-shadow: 0 8px 32px rgba(1, 8, 9, .5), inset 0 1px rgba(252, 248, 249, .04);
+
   &.swiper-button-disabled {
     pointer-events: none;
-    color: $border;
+    background: rgba(255, 255, 255, 0.3);
+    border-color: $border;
     opacity: 0.4;
     cursor: default;
   }
+
   &:before {
-    font-size: 24px;
+    font-size: 20px;
+    color: $tx;
+    transition: all 0.3s ease;
   }
+
   @include hover {
-    color: $cl;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+    &:before {
+      color: white;
+    }
   }
+}
+
+.sw_prev {
+  left: 20px;
+}
+
+.sw_next {
+  right: 20px;
 }
 
 .sw_pagination {
@@ -36,17 +80,108 @@
   .swiper-pagination-bullet {
     transition: all 0.3s ease;
     opacity: 1;
-    height: 12px;
-    width: 12px;
+    height: 14px;
+    width: 14px;
     background-color: $border;
-    margin: 0 10px;
+    margin: 0 8px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+
     @include hover {
       opacity: 1;
       background-color: $cl;
+      transform: scale(1.2);
     }
+
     &.swiper-pagination-bullet-active {
       opacity: 1;
       background-color: $cl;
+      border-color: $cl;
+      transform: scale(1.3);
     }
   }
+}
+
+// Thumbnail slider
+.swiper_thumbs {
+  margin-top: 20px;
+
+  .swiper-slide {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    opacity: 0.7;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease;
+    }
+
+    @include hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    &.swiper-slide-thumb-active {
+      opacity: 1;
+      border-color: $cl;
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+// Main slider image enhancement
+.block__custom_slider_item {
+  position: relative;
+  width: 100%;
+
+  .slider-image-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  picture {
+    display: block;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      transition: all 0.3s ease;
+      display: block;
+      transform: scale(0.95);
+    }
+  }
+
+  @include hover {
+    picture img {
+      transform: scale(0.98);
+    }
+  }
+}
+
+// Ensure swiper container respects image aspect ratio
+.swiper {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: auto;
 }
