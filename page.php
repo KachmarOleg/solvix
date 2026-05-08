@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part( 'tpl-parts/top-panels/top-panel', 'secondary' ); ?>
+<h1 class="is_visually_hidden"><?php the_title(); ?></h1>
 
 <?php get_template_part( 'tpl-parts/gutenberg' ); ?>
 

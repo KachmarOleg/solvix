@@ -43,18 +43,7 @@
     }
 
     &__button {
-        width: fit-content;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 16px 28px;
-        color: #f2f2f2;
+        gap: 10px;
         background: linear-gradient(106.17deg, rgb(14 53 57) 0%, rgb(8 30 33) 100%);
-        //background: #021517;
-        border: 1px solid rgba(73, 167, 163, .12);
-        box-shadow: 0 8px 32px rgba(1, 8, 9, .5);
-        backdrop-filter: blur(10px);
-        border-radius: 12px;
     }
 }
