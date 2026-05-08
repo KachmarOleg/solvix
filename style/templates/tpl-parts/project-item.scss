@@ -15,6 +15,9 @@
 
   &.in_row_3 {
     grid-template-columns: repeat(3, 1fr);
+    @include rwd-max(767) { 
+        grid-template-columns: 1fr;
+    }
 
     .project_card__button {
       display: none;
