@@ -1,0 +1,17 @@
+{
+  "name": "acf/cta-block",
+  "title": "CTA Block",
+  "description": "A custom call-to-action block with subtitle, title, description and button.",
+  "category": "media",
+  "keywords": [
+    "cta",
+    "call-to-action",
+    "button"
+  ],
+  "icon": "megaphone",
+  "apiVersion": 2,
+  "acf": {
+    "renderTemplate": "./block-cta.php",
+    "mode": "edit"
+  }
+}

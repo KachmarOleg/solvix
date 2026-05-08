@@ -6,8 +6,13 @@
 
 <?php get_template_part( 'tpl-parts/gutenberg', null ); ?>
 
-<?php get_template_part( 'tpl-parts/single/single', 'related' ); ?>
+<?php
+$cta_block = get_field( 'cta_block', 'option' );
+if ( $cta_block ) {
+    get_template_part( 'tpl-acf-blocks/cta-block/block', 'cta', array( 'block' => $cta_block ) );
+} ?>
 
+<?php get_template_part( 'tpl-parts/single/single', 'related' ); ?>
 
 <?php
 $file_name = basename( __FILE__, '.php' );
