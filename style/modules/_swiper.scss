@@ -16,6 +16,9 @@
   align-items: center;
   pointer-events: none;
   z-index: 10;
+  @include rwd-max(767) {
+    display: none;
+  }
 }
 
 .sw_prev,
@@ -105,16 +108,32 @@
 // Thumbnail slider
 .swiper_thumbs {
   margin-top: 20px;
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 8px;
+  overflow: visible !important;
+  .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    transform: none !important;
+    width: 100% !important;
+  }
 
   .swiper-slide {
-    width: 80px;
-    height: 80px;
+    width: calc(16.666% - 7px) !important; // Responsive: 6 per row with gaps
+    height: auto !important;
+    aspect-ratio: 1 / 1;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease;
     border: 3px solid transparent;
     opacity: 0.7;
+    flex-shrink: 0;
+    @media (max-width: 768px) {
+      width: calc(25% - 6px) !important; // 3 per row on tablet
+    }
 
     img {
       width: 100%;

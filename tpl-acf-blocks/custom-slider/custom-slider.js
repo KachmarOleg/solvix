@@ -5,6 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const prev = swiperWrapper.querySelector('.sw_prev');
         const pagination = swiperWrapper.querySelector('.sw_pagination');
         const thumbsContainer = swiperWrapper.querySelector('.swiper_thumbs');
+        const thumbsSwiper = new Swiper('.swiper_thumbs', {
+            // Disable all sliding
+            slidesPerView: 'auto',
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+            allowTouchMove: false, // Disable drag
+        });
 
         const swiper = new Swiper(swiperContainer, {
             navigation: {
@@ -19,14 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 crossFade: true
             },
             thumbs: {
-                swiper: thumbsContainer ? new Swiper(thumbsContainer, {
-                    slidesPerView: 'auto',
-                    spaceBetween: 10,
-                    watchSlidesProgress: true,
-                    loop: true,
-                    centeredSlides: false,
-                    slideToClickedSlide: true,
-                }) : null
+                swiper: thumbsSwiper,
             }
         });
 
