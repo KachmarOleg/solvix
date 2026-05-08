@@ -24,9 +24,9 @@ if ( $related_query->have_posts() ) : ?>
     <div class="single_post__related">
         <div class="container">
             <h2><?php echo esc_html( 'Related articles' ); ?></h2>
-            <div class="posts__container">
+            <div class="projects_container in_row_3">
 				<?php while ( $related_query->have_posts() )  : $related_query->the_post();
-					get_template_part( 'tpl-parts/post-items/post', 'item' );
+					get_template_part( 'tpl-parts/post-items/project', 'item', array( 'project' => get_post() ) );
 				endwhile; ?>
             </div>
         </div>
