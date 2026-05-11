@@ -45,7 +45,7 @@ $(document).ready(function () {
 
     animate();
 
-    const interactive = document.querySelectorAll('a, button, .block__custom_slider, .sw_controls, .swiper_thumbs');
+    const interactive = document.querySelectorAll('a, button, .block__custom_slider, .sw_controls, .swiper_thumbs, input, textarea, select, .wpcf7-form-control');
 
     interactive.forEach(el => {
         el.addEventListener('mouseenter', () => {

@@ -90,6 +90,10 @@ a, button, input, textarea, select, .button {
   transition: all 0.3s ease;
 }
 
+fieldset {
+  display: none;
+}
+
 input:not([type="submit"]):not([type="button"]):not([type="radio"]):not([type="checkbox"]), select, textarea {
   width: 100%;
   outline: 0 none;

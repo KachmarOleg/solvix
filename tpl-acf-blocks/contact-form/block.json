@@ -1,0 +1,17 @@
+{
+  "name": "acf/contact-form",
+  "title": "Contact Form",
+  "description": "A custom block to display a contact form with various input fields.",
+  "category": "widgets",
+  "keywords": [
+    "contact",
+    "form",
+    "contact form"
+  ],
+  "icon": "feedback",
+  "apiVersion": 2,
+  "acf": {
+    "renderTemplate": "./block-contact-form.php",
+    "mode": "edit"
+  }
+}

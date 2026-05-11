@@ -1,0 +1,43 @@
+@import '../../style/import/import';
+
+.projects_block {
+  margin: 120px ;
+  @include rwd-max(1024) {
+    margin: 80px 0;
+  }
+
+
+  .contact_form_container {
+    position: relative;
+    overflow: hidden;
+    padding: 40px 40px 20px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    backdrop-filter: blur(3px) saturate(250%);
+    -webkit-backdrop-filter: blur(3px) saturate(250%);
+    border: 1px solid rgb(47 173 167 / 30%);
+    box-shadow: 0 20px 80px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.3);
+    transition: 0.3s;
+    @include rwd-min(1025) {
+      margin: 0 auto;
+      width: 60%;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    @include rwd-min(1025) {
+      max-width: 60%;
+      margin: 0 auto;
+    }
+  }
+
+  &__description {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 29px;
+    color: $tx;
+  }
+}
