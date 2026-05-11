@@ -20,6 +20,23 @@
       height: auto;
     }
 
+    &::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      right: 0;
+      bottom: 0;
+      width: 50vw;
+      height: auto;
+      aspect-ratio: 1;
+      transform: translate(-50%, 0%);
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 255, 180, 0.15) 0, transparent 100%);
+      filter: blur(60px);
+      pointer-events: none;
+    }
+
     .container {
       display: flex;
       flex-direction: column;
@@ -61,23 +78,6 @@
     right: 0;
     bottom: 0;
     background-color: transparent;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 50vw;
-    height: auto;
-    aspect-ratio: 1;
-    transform: translate(-50%, 0%);
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 255, 180, 0.15) 0, transparent 100%);
-    filter: blur(60px);
-    pointer-events: none;
   }
 
   figure, picture {
@@ -148,6 +148,23 @@
     @include rwd-max(1024) {
         background: linear-gradient(180deg, rgba(2, 21, 23, 0.4) 0%, rgba(2, 21, 23, 0.4) 0, #021517 100%);
     }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 50vw;
+    height: auto;
+    aspect-ratio: 1;
+    transform: translate(-50%, 0%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 255, 180, 0.15) 0, transparent 100%);
+    filter: blur(60px);
+    pointer-events: none;
   }
 
   .grid_decor {
