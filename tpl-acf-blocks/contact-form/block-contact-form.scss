@@ -10,7 +10,7 @@
   .contact_form_container {
     position: relative;
     overflow: hidden;
-    padding: 40px 40px 20px;
+    padding: 20px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -21,8 +21,13 @@
     box-shadow: 0 20px 80px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(0,0,0,0.3);
     transition: 0.3s;
     @include rwd-min(1025) {
-      margin: 0 auto;
+      margin: 48px auto 0;
+      padding: 40px 40px 20px;
       width: 60%;
+    }
+    @include rwd-range(1024, 768) {
+      width: 80%;
+      margin: 48px auto 0;
     }
   }
 
@@ -30,6 +35,10 @@
     text-align: center;
     @include rwd-min(1025) {
       max-width: 60%;
+      margin: 0 auto;
+    }
+    @include rwd-range(1024, 768) {
+      max-width: 80%;
       margin: 0 auto;
     }
   }

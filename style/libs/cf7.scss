@@ -3,7 +3,7 @@
 
 // cf7
 $form-error: #ff5f5f;
-$form-success: #00c4b4;
+$form-success: #3dba7e;
 
 div.wpcf7 {
   position: relative;
@@ -84,7 +84,7 @@ div.wpcf7 {
     right: 0;
     margin-top: 20px !important;
     font: 400 16px/1.4 $ff;
-    color: $tx;
+    color: $bg;
     padding: 12px;
     border-radius: 8px;
     text-align: center;
@@ -97,10 +97,14 @@ div.wpcf7 {
       font: 400 16px $ff;
       color: $tx;
       padding: 0 15px;
-      border: 1px solid $border;
+      border: 1px solid #164e4f;
       border-radius: 8px;
       background-color: $bg;
-      @include placeholder {color: $tx; opacity: 1}
+      @include placeholder {
+        color: $tx_grey;
+        font-weight: 300;
+        opacity: 1;
+      }
 
       &:focus,
       &:focus-visible {
@@ -142,7 +146,8 @@ div.wpcf7 {
           content: '';
           height: 24px;
           border-radius: 3px;
-          border: 1px solid $teal_tx;
+          border: 1px solid #164e4f;
+          background: $bg;
         }
 
         &:after {
