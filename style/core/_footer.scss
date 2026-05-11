@@ -6,3 +6,151 @@ footer {
   border-top: 1px solid $border;
   background-color: $bg;
 }
+
+
+.site_footer {
+  position: relative;
+  background: linear-gradient(180deg, $bg 0%, $bg2 100%);
+  border-top: 1px solid $border;
+  padding: 48px 0 24px;
+  color: $tx_grey;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include rwd-max(767) {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  &__left {
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    display: inline-flex;
+    margin-bottom: 24px;
+
+    img {
+      display: block;
+      width: auto;
+      max-width: 160px;
+      height: auto;
+    }
+  }
+
+  &__slogan {
+    margin-bottom: 24px;
+    color: $tx_grey;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+  }
+
+  &__email {
+    font-size: 16px;
+    font-weight: 600;
+    color: $tx;
+    text-decoration: none;
+    transition: 0.25s ease;
+
+    &:hover {
+      color: $teal_tx;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    @include rwd-max(767) { 
+      justify-content: flex-start;
+    }
+  }
+
+  &__bottom {
+    padding-top: 24px;
+    border-top: 1px solid $border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    @include rwd-max(539) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__copy {
+    color: rgba($tx, 0.55);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+
+.footer_menu,
+.footer_bottom_menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+    color: $tx_grey;
+    transition: 0.25s ease;
+  }
+}
+
+.footer_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 18px;
+  @include rwd-max(767) {
+    align-items: flex-start;
+  }
+
+  a {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+
+    &:hover {
+      color: $teal_tx;
+    }
+  }
+}
+
+.footer_bottom_menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+
+  a {
+    color: rgba($tx, 0.6);
+    font-size: 12px;
+
+    &:hover {
+      color: $tx;
+    }
+  }
+}

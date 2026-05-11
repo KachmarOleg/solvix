@@ -5,7 +5,9 @@ require_once('inc/themer.php');
 
 // register menus
 register_nav_menus(array(
-    'main_menu' => 'Main menu'
+    'main_menu'          => 'Main menu',
+    'footer_menu'        => 'Footer Menu',
+    'footer_bottom_menu' => 'Footer Bottom Menu',
 ));
 
 // custom images sizes
