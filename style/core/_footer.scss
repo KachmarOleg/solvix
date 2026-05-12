@@ -64,7 +64,7 @@ footer {
     font-weight: 600;
     color: $tx;
     text-decoration: none;
-    transition: 0.25s ease;
+    transition: 0.3s;
 
     &:hover {
       color: $teal_tx;
@@ -115,7 +115,7 @@ footer {
     display: inline-flex;
     text-decoration: none;
     color: $tx_grey;
-    transition: 0.25s ease;
+    transition: 0.3s;
   }
 }
 
