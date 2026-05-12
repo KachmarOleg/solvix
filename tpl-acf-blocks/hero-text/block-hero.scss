@@ -5,6 +5,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -200%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    width: 50vw;
+    height: auto;
+    aspect-ratio: 1;
+    transform: translate(-50%, 0%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 255, 180, 0.15) 0, transparent 100%);
+    filter: blur(60px);
+    pointer-events: none;
+  }
 
   &__description {
     margin-bottom: 32px;

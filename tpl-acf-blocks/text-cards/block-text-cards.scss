@@ -74,6 +74,12 @@
       border: 1px solid rgba(73, 167, 163, 0.2);
       border-radius: 12px;
 
+      svg {
+        path {
+          stroke: $cl;
+        }
+      }
+
       img {
         width: 22px;
         height: 22px;
@@ -86,7 +92,7 @@
       font-size: 18px;
       line-height: 25px;
       letter-spacing: -0.36px;
-      color: #FCF8F9;
+      color: $teal_tx;
     }
   }
 

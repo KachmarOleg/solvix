@@ -27,9 +27,16 @@ $block = get_field( 'text_cards' ); ?>
                 <?php foreach ( $cards as $card ) : ?>
                     <div class="text_card">
                         <?php if ( $card['icon'] ) :
-                            $img_id = $card['icon']['id']; ?>
+                            $img_id   = $card['icon']['id'];
+                            $img_path = get_attached_file( $img_id );
+                            $filetype = wp_check_filetype( $img_path ); ?>
+
                             <figure class="text_card__icon">
-                                <?php echo wp_get_attachment_image( $img_id, 'full', false, array( 'alt' => get_alt( $img_id ), 'class' => 'object_fit' ) ); ?>
+                                <?php if ( $filetype['ext'] === 'svg' ) : ?>
+                                    <?php echo file_get_contents( $img_path ); ?>
+                                <?php else : ?>
+                                    <?php echo wp_get_attachment_image($img_id, 'full', false, array('alt'   => get_alt( $img_id ), 'class' => 'object_fit',)); ?>
+                                <?php endif; ?>
                             </figure>
                         <?php endif; ?>
 

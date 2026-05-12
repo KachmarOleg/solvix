@@ -7,7 +7,7 @@ $block = get_field( 'hero_block' ); ?>
 <section class="hero_block">
     <div class="container">
         <div class="container_grid">
-            <div class="start_1_cols_8 hero_block__header">
+            <div class="start_3_cols_8 hero_block__header text_center">
                 <?php if ( $subtitle = $block['subtitle'] ) : ?>
                     <p class="subtitle"><?php echo esc_html($subtitle); ?></p>
                 <?php endif; ?>
