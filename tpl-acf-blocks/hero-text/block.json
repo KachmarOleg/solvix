@@ -1,0 +1,16 @@
+{
+  "name": "acf/hero-text",
+  "title": "Hero Text",
+  "description": "A custom hero text block with title, subtitle and description.",
+  "category": "media",
+  "keywords": [
+    "hero",
+    "text"
+  ],
+  "icon": "text",
+  "apiVersion": 2,
+  "acf": {
+    "renderTemplate": "./block-hero.php",
+    "mode": "edit"
+  }
+}

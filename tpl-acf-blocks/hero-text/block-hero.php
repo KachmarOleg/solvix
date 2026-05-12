@@ -1,0 +1,31 @@
+<?php
+$block = get_field( 'hero_block' ); ?>
+
+    </div>
+</div>
+
+<section class="hero_block">
+    <div class="container">
+        <div class="container_grid">
+            <div class="start_1_cols_8 hero_block__header">
+                <?php if ( $subtitle = $block['subtitle'] ) : ?>
+                    <p class="subtitle"><?php echo esc_html($subtitle); ?></p>
+                <?php endif; ?>
+
+                <?php if ( $title = $block['title'] ) : ?>
+                    <h2><?php echo esc_html( $title ); ?></h2>
+                <?php endif; ?>
+
+                <?php if ( $description = $block['description'] ) : ?>
+                    <div class="hero_block__description content">
+                        <?php echo wp_kses_post( $description ); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="container">
+    <div class="content">

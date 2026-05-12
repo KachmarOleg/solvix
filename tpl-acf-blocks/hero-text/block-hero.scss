@@ -1,0 +1,15 @@
+@import '../../style/import/import';
+
+.hero_block {
+  margin: 120px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__description {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 29px;
+    color: $tx;
+  }
+}
