@@ -1,0 +1,18 @@
+{
+  "name": "acf/story-block",
+  "title": "Story block",
+  "description": "A custom text block with description and text cards.",
+  "category": "media",
+  "keywords": [
+    "text",
+    "image",
+    "media",
+    "columns"
+  ],
+  "icon": "format-gallery",
+  "apiVersion": 2,
+  "acf": {
+    "renderTemplate": "./block-story.php",
+    "mode": "edit"
+  }
+}

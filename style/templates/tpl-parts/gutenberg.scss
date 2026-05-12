@@ -4,8 +4,8 @@
 .page {
   .gutenberg .content {
     & > *:not(p):not(.wp-block-heading):not(.wp-block-spacer):not(.wp-block-separator) {
-      margin-bottom: 80px;
-      @include rwd-min(768) {margin-bottom: 120px}
+      //margin-bottom: 80px;
+      //@include rwd-min(768) {margin-bottom: 120px}
     }
     & > *:last-child {margin-bottom: 0 !important}
     .wp-block-columns {
