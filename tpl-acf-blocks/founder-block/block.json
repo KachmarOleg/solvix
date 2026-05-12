@@ -1,0 +1,18 @@
+{
+  "name": "acf/founder-block",
+  "title": "Founder block",
+  "description": "A custom block with info about founder.",
+  "category": "media",
+  "keywords": [
+    "founder",
+    "founders",
+    "founder-block",
+    "founders-block"
+  ],
+  "icon": "format-gallery",
+  "apiVersion": 2,
+  "acf": {
+    "renderTemplate": "./block-founder.php",
+    "mode": "edit"
+  }
+}

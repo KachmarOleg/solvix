@@ -1,14 +1,15 @@
 @import '../../style/import/import';
 
-.story_block {
+.founder_block {
   margin: 120px 0;
+  padding: 90px 0;
 
   @include rwd-max(1024) {
+    padding: 80px 0;
     margin: 80px 0;
   }
 
   &.template_2 {
-    padding: 90px 0;
     background: linear-gradient(106.17deg, rgba(14, 53, 57, 0.6) 0%, rgba(8, 30, 33, 0.4) 100%);
     border-top: 1px solid rgba(73, 167, 163, .12);
     border-bottom: 1px solid rgba(73, 167, 163, .12);
@@ -16,9 +17,6 @@
     backdrop-filter: blur(14px);
     background: #001619;
     transition: all .3s ease;
-    @include rwd-max(1024) {
-      padding: 80px 0;
-    }
 
     .cards_container {
       grid-template-columns: repeat(3, 1fr);
@@ -31,12 +29,12 @@
         border: 1px solid rgba($teal_tx, 0.4);
 
         svg {
-          //stroke: $cl;
+          stroke: $cl;
         }
       }
 
       &__title {
-        //color: $cl;
+        color: $cl;
       }
     }
   }
@@ -50,7 +48,19 @@
     }
   }
 
-  .story_block__description {
+  &__title {
+    margin-bottom: 24px;
+    
+    h2 {
+      margin-bottom: 0 !important;
+    }
+
+    strong {
+      color: $cl;
+    }
+  }
+
+  &__description {
     font-size: 18px;
     line-height: 29px;
     color: $tx;
@@ -64,7 +74,7 @@
     }
   }
 
-  .story_block__image {
+  &__image {
     max-width: 294px;
     @include rwd-max(1024) {
       margin: 32px auto 0;
@@ -167,6 +177,61 @@
       line-height: 25px;
       letter-spacing: -0.36px;
       color: #FCF8F9;
+    }
+  }
+
+  .founder_card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid $border;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    backdrop-filter: blur(3px) saturate(250%);
+    -webkit-backdrop-filter: blur(3px) saturate(250%);
+    border: 1px solid rgba(47, 173, 167, .3);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255, 255, 255, .18), inset 0 -1px 0 rgba(0, 0, 0, .3);
+    border-radius: 12px;
+    transition: .3s;
+
+    figure {
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgb(73, 167, 163) 0%, rgba(254, 151, 44, 0.89) 100%);
+      padding: 20px 10px 0;
+      flex: 2;
+    }
+
+    &__text_into {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 20px;
+      flex: 3;
+      height: 100%;
+
+      .subtitle {
+        margin-bottom: 0;
+      }
+
+      .title {
+        line-height: 32px;
+      }
+
+      .description {
+        color: $tx_grey;
+        font-weight: 300;
+        font-size: 16px;
+      }
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin: 0;
+      padding: 12px 18px;
     }
   }
 }
