@@ -38,16 +38,19 @@ $(document).ready(function () {
             requestAnimationFrame(step);
         };
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    nums.forEach(run);
-                    observer.disconnect();
-                }
+        const achievementsBlock = document.querySelector('.achievements_block');
+        if (achievementsBlock) {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        nums.forEach(run);
+                        observer.disconnect();
+                    }
+                });
             });
-        });
 
-        observer.observe(document.querySelector('.achievements_block'));
+            observer.observe(achievementsBlock);
+        }
     /* Achievements end */
 
 
