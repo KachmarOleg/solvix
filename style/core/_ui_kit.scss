@@ -379,6 +379,21 @@ hr {
   }
 }
 
+.narrow_container {
+  .content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 760px;
+  }
+
+  h2 {
+    font-size: 42px;
+    background: linear-gradient(135deg, #ffffff 0%, #49a7a3 45%, #ff9f1c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 $columns: 12;
 @for $start from 1 through $columns {
   @for $span from 1 through ($columns - $start + 1) {
