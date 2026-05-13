@@ -29,31 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 swiper: thumbsSwiper,
             }
         });
-
-        // Initialize Fancybox for main slider images
-        Fancybox.bind('[data-fancybox="slider-gallery"]', {
-            Thumbs: {
-                type: "modern"
-            },
-            Toolbar: {
-                display: {
-                    left: ["infobar"],
-                    middle: [
-                        "zoomIn",
-                        "zoomOut",
-                        "toggle1to1",
-                        "rotateCCW",
-                        "rotateCW",
-                        "flipX",
-                        "flipY",
-                    ],
-                    right: ["slideshow", "fullscreen", "download", "close"],
-                },
-            },
-            Carousel: {
-                transition: "fade",
-                infinite: true,
-            },
-        });
     });
 });
