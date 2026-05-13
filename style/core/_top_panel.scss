@@ -4,9 +4,13 @@
     &__primary,
     &__secondary {
       height: calc(100dvh - 112px);
-      @include rwd-max(1024) {
+      @include rwd-range(1024, 480) {
         height: calc(100dvh - 112px);
         min-height: 740px;
+      }
+
+      @include rwd-max(479) {
+        height: auto;
       }
     }
   }
@@ -90,6 +94,12 @@
   }
 
   h1 {color: $tx}
+
+  .wp-block-buttons {
+    @include rwd-max(479) {
+      flex-direction: column;
+    }
+  }
 }
 
 .top_panel__secondary {
