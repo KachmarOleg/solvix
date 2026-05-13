@@ -21,7 +21,7 @@ $technologies = $meta_section['technologies'] ?? '';
 
             <?php if ( $client ) : ?>
                 <div class="meta-item">
-                    <span class="meta-label">Client:</span>
+                    <span class="meta-label">Country:</span>
                     <span class="meta-value"><?php echo esc_html( $client ); ?></span>
                 </div>
             <?php endif; ?>
