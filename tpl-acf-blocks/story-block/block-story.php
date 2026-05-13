@@ -11,9 +11,24 @@ $block = get_field( 'story_block' ); ?>
                 <?php if ( $subtitle = $block['subtitle'] ) : ?>
                     <p class="subtitle"><?php echo esc_html($subtitle); ?></p>
                 <?php endif; ?>
+
+                <div class="rwd_show">
+                    <?php if ( $image = $block['image'] ) :
+                        $img_id = $image['id']; ?>
+                        <figure class="story_block__image">
+                            <?php echo wp_get_attachment_image( $img_id, 'full', false, array( 'alt' => get_alt( $img_id ), 'class' => 'object_fit' ) ); ?>
+                        </figure>
+                    <?php endif; ?>
+
+                    <?php if ( $description = $block['description'] ) : ?>
+                        <div class="story_block__description content">
+                            <?php echo wp_kses_post( $description ); ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
 
-            <div class="start_6_cols_6 ">
+            <div class="start_6_cols_6 rwd_hide">
                 <?php if ( $image = $block['image'] ) :
                     $img_id = $image['id']; ?>
                     <figure class="story_block__image">

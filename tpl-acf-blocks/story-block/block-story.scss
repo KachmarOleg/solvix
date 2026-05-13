@@ -22,6 +22,12 @@
 
     .cards_container {
       grid-template-columns: repeat(3, 1fr);
+      @include rwd-range(1024, 768) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include rwd-max(767) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 
@@ -64,11 +70,17 @@
     }
   }
 
+  &__text {
+    @include rwd-range(1024, 768) {
+        grid-column: 1/span 8 !important;
+    }
+  }
+
   .story_block__image {
     max-width: 294px;
     margin-bottom: 32px;
     @include rwd-max(1024) {
-      margin: 32px auto 0;
+      //margin: 32px auto 0;
     }
     @include rwd-max(767) {
       max-width: 300px;
@@ -135,8 +147,6 @@
           //stroke: $cl;
         }
       }
-
-
     }
 
 

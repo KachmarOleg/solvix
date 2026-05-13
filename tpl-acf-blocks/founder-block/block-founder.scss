@@ -60,27 +60,22 @@
     }
   }
 
-  &__description {
-    font-size: 18px;
-    line-height: 29px;
-    color: $tx;
+  .text_card {
+    &__description {
+      font-size: 18px;
+      line-height: 29px;
+      color: $tx;
+      @include rwd-max(767) {
+        margin-bottom: 32px;
+      }
 
-    h2 {
-      margin-bottom: 32px !important;
-    }
+      h2 {
+        margin-bottom: 32px !important;
+      }
 
-    strong {
-      color: $cl;
-    }
-  }
-
-  &__image {
-    max-width: 294px;
-    @include rwd-max(1024) {
-      margin: 32px auto 0;
-    }
-    @include rwd-max(767) {
-      max-width: 300px;
+      strong {
+        color: $cl;
+      }
     }
   }
 
@@ -182,7 +177,6 @@
 
   .founder_card {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 20px;
     padding: 20px;
@@ -194,12 +188,43 @@
     box-shadow: 0 20px 80px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255, 255, 255, .18), inset 0 -1px 0 rgba(0, 0, 0, .3);
     border-radius: 12px;
     transition: .3s;
+    @include rwd-max(767) { 
+      align-items: normal;
+    }
+    @include rwd-max(539) {
+      flex-direction: column;
+    }
+    @include rwd-range(1024, 768) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__image_wrapper {
+      flex: 2;
+      @include rwd-min(1025) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+      }
+    }
 
     figure {
       border-radius: 12px;
       background: linear-gradient(180deg, rgb(73, 167, 163) 0%, rgba(254, 151, 44, 0.89) 100%);
       padding: 20px 10px 0;
-      flex: 2;
+
+      @include rwd-range(1024, 768) {
+        max-width: 150px;
+        align-items: flex-start;
+      }
+      @include rwd-max(767) {
+        padding: 20px 0 0;
+      }
+      @include rwd-max(539) {
+        max-width: 150px;
+        align-items: flex-start;
+      }
     }
 
     &__text_into {
@@ -208,7 +233,7 @@
       align-items: flex-start;
       justify-content: center;
       gap: 20px;
-      flex: 3;
+      flex: 5;
       height: 100%;
 
       .subtitle {
@@ -217,6 +242,9 @@
 
       .title {
         line-height: 32px;
+        @include rwd-max(539) {
+          line-height: normal;
+        }
       }
 
       .description {

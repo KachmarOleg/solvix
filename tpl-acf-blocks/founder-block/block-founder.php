@@ -29,9 +29,11 @@ $block = get_field( 'founder_block' ); ?>
                 <div class="founder_card">
                     <?php if ( $image = $block['founder_card']['image'] ) :
                         $img_id = $image['id']; ?>
-                        <figure class="founder_block__image">
-                            <?php echo wp_get_attachment_image( $img_id, 'full', false, array( 'alt' => get_alt( $img_id ), 'class' => 'object_fit' ) ); ?>
-                        </figure>
+                        <div class="founder_card__image_wrapper">
+                            <figure class="founder_card__image">
+                                <?php echo wp_get_attachment_image( $img_id, 'full', false, array( 'alt' => get_alt( $img_id ), 'class' => 'object_fit' ) ); ?>
+                            </figure>
+                        </div>
                     <?php endif; ?>
 
                     <div class="founder_card__text_into">
