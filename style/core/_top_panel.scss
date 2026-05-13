@@ -114,8 +114,10 @@
 
     .tablet_view {
       height: 100%;
-      min-height: 740px;
       padding-bottom: 40px;
+      @include rwd-min(1025) {
+        min-height: 740px;
+      }
 
       .text_col {
         justify-content: flex-end;
