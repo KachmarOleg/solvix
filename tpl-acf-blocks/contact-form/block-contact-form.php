@@ -4,9 +4,9 @@ $block = get_field( 'contact_form' ); ?>
     </div>
 </div>
 
-<section class="projects_block">
+<section class="contact_form">
     <div class="container">
-        <div class="projects_block__header">
+        <div class="contact_form__header">
             <?php if ( $subtitle = $block['subtitle'] ) : ?>
                 <p class="subtitle"><?php echo esc_html($subtitle); ?></p>
             <?php endif; ?>
@@ -16,7 +16,7 @@ $block = get_field( 'contact_form' ); ?>
             <?php endif; ?>
 
             <?php if ( $description = $block['description'] ) : ?>
-                <div class="projects_block__description content">
+                <div class="contact_form__description content">
                     <?php echo wp_kses_post( $description ); ?>
                 </div>
             <?php endif; ?>

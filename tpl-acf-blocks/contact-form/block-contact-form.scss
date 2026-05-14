@@ -1,11 +1,7 @@
 @import '../../style/import/import';
 
-.projects_block {
-  margin: 120px ;
-  @include rwd-max(1024) {
-    margin: 80px 0;
-  }
-
+.contact_form {
+  margin: 50px ;
 
   .contact_form_container {
     position: relative;
