@@ -10,12 +10,11 @@ foreach ( $categories as $category ) {
 }
 
 $args = array(
-	'post_type'      => $post_type,
-	'posts_per_page' => 3,
-	'post__not_in'   => array( $current_post_id ),
-	'category__in'   => $category_ids,
-	'orderby'        => 'date',
-	'order'          => 'DESC',
+        'post_type'      => $post_type,
+        'posts_per_page' => 3,
+        'post__not_in'   => array( $current_post_id ),
+        'category__in'   => $category_ids,
+        'orderby'        => 'rand',
 );
 
 $related_query = new WP_Query( $args );
